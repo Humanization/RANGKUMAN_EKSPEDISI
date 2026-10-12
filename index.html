@@ -27,10 +27,10 @@
                 <a href="#petani" class="hover:text-orange-600 transition flex items-center space-x-1.5 bg-orange-50 px-3 py-1.5 rounded-full border border-orange-200/50"><span>🌾</span><span>Petani Lokal</span></a>
                 <a href="#jembatan" class="hover:text-sky-600 transition flex items-center space-x-1.5 bg-sky-50 px-3 py-1.5 rounded-full border border-sky-200/50"><span>🌉</span><span>Bersih Jembatan</span></a>
             </nav>
-            <button onclick="openUploadModal()" class="bg-gradient-to-r from-amber-500 via-rose-500 to-emerald-600 hover:from-amber-600 hover:to-emerald-700 text-white text-xs sm:text-sm font-extrabold px-5 py-3 rounded-2xl transition shadow-lg shadow-rose-500/25 hover:scale-105 flex items-center space-x-2 cursor-pointer">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"/></svg>
-                <span>Upload Foto ✨</span>
-            </button>
+            <div class="bg-amber-100 text-amber-900 text-xs sm:text-sm font-extrabold px-4 py-2.5 rounded-2xl border border-amber-300 flex items-center space-x-2 shadow-xs">
+                <span>📸</span>
+                <span>Mode Edit Kode Aktif</span>
+            </div>
         </div>
     </header>
 
@@ -89,12 +89,7 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="grid grid-cols-2 gap-4" id="gallery-tpa">
-                        <div class="relative group aspect-square rounded-3xl overflow-hidden bg-amber-50 border-3 border-amber-200 shadow-sm placeholder-item">
-                            <img src="https://placehold.co/400x400/fef3c7/d97706?text=TPA+Ceria+1" alt="Kegiatan TPA 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="relative group aspect-square rounded-3xl overflow-hidden bg-amber-50 border-3 border-amber-200 shadow-sm placeholder-item">
-                            <img src="https://placehold.co/400x400/fef3c7/d97706?text=TPA+Ceria+2" alt="Kegiatan TPA 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        </div>
+                        <!-- Foto dimuat otomatis dari script konfigurasi -->
                     </div>
                 </div>
             </div>
@@ -122,12 +117,7 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="grid grid-cols-2 gap-4" id="gallery-sd">
-                        <div class="relative group aspect-square rounded-3xl overflow-hidden bg-emerald-50 border-3 border-emerald-200 shadow-sm placeholder-item">
-                            <img src="https://placehold.co/400x400/d1fae5/059669?text=Penyuluhan+1" alt="Penyuluhan SD 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="relative group aspect-square rounded-3xl overflow-hidden bg-emerald-50 border-3 border-emerald-200 shadow-sm placeholder-item">
-                            <img src="https://placehold.co/400x400/d1fae5/059669?text=Penyuluhan+2" alt="Penyuluhan SD 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        </div>
+                        <!-- Foto dimuat otomatis dari script konfigurasi -->
                     </div>
                 </div>
             </div>
@@ -155,12 +145,7 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="grid grid-cols-2 gap-4" id="gallery-petani">
-                        <div class="relative group aspect-square rounded-3xl overflow-hidden bg-orange-50 border-3 border-orange-200 shadow-sm placeholder-item">
-                            <img src="https://placehold.co/400x400/ffedd5/c2410c?text=Petani+Lokal+1" alt="Wawancara Petani 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="relative group aspect-square rounded-3xl overflow-hidden bg-orange-50 border-3 border-orange-200 shadow-sm placeholder-item">
-                            <img src="https://placehold.co/400x400/ffedd5/c2410c?text=Petani+Lokal+2" alt="Wawancara Petani 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        </div>
+                        <!-- Foto dimuat otomatis dari script konfigurasi -->
                     </div>
                 </div>
             </div>
@@ -188,63 +173,13 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="grid grid-cols-2 gap-4" id="gallery-jembatan">
-                        <div class="relative group aspect-square rounded-3xl overflow-hidden bg-sky-50 border-3 border-sky-200 shadow-sm placeholder-item">
-                            <img src="https://placehold.co/400x400/e0f2fe/0284c7?text=Jembatan+1" alt="Bersih Jembatan 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        </div>
-                        <div class="relative group aspect-square rounded-3xl overflow-hidden bg-sky-50 border-3 border-sky-200 shadow-sm placeholder-item">
-                            <img src="https://placehold.co/400x400/e0f2fe/0284c7?text=Jembatan+2" alt="Bersih Jembatan 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                        </div>
+                        <!-- Foto dimuat otomatis dari script konfigurasi -->
                     </div>
                 </div>
             </div>
         </section>
 
     </main>
-
-    <div id="uploadModal" class="fixed inset-0 z-50 bg-stone-900/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-[3rem] max-w-md w-full p-8 space-y-6 shadow-2xl border-3 border-amber-300 animate-in fade-in zoom-in-95 duration-200">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <span class="text-3xl">📸</span>
-                    <div>
-                        <h3 class="text-xl font-extrabold text-stone-900">Upload Dokumentasi</h3>
-                        <p class="text-xs text-stone-500 font-bold">Simpan permanen untuk semua perangkat</p>
-                    </div>
-                </div>
-                <button onclick="closeUploadModal()" class="text-stone-400 hover:text-stone-700 p-2.5 bg-stone-100 hover:bg-stone-200 rounded-full transition font-black cursor-pointer">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
-            </div>
-            
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-xs font-extrabold uppercase tracking-wider text-stone-600 mb-2">Pilih Kategori Kegiatan ✨</label>
-                    <select id="uploadCategory" class="w-full bg-stone-50 border-3 border-stone-200 rounded-2xl px-4 py-3.5 text-sm font-extrabold text-stone-800 focus:outline-none focus:border-amber-500 transition">
-                        <option value="tpa">🎈 Anak TPA</option>
-                        <option value="sd">🎒 Penyuluhan SD</option>
-                        <option value="petani">🌾 Wawancara Petani</option>
-                        <option value="jembatan">🌉 Bersih Jembatan Kaca</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-extrabold uppercase tracking-wider text-stone-600 mb-2">Password Khusus Penanggung Jawab 🔒</label>
-                    <input type="password" id="uploadPassword" placeholder="Masukkan password..." class="w-full bg-stone-50 border-3 border-stone-200 rounded-2xl px-4 py-3.5 text-sm font-bold text-stone-800 focus:outline-none focus:border-amber-500 transition">
-                    <p class="text-xs text-amber-700 mt-1.5 font-bold">Hint: rt01hebat</p>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-extrabold uppercase tracking-wider text-stone-600 mb-2">Pilih Foto dari Perangkat 📁</label>
-                    <input type="file" id="uploadFile" accept="image/*" multiple class="w-full text-xs font-bold text-stone-600 file:mr-4 file:py-3 file:px-5 file:rounded-xl file:border-0 file:text-xs file:font-extrabold file:bg-amber-200 file:text-amber-900 hover:file:bg-amber-300 cursor-pointer">
-                </div>
-            </div>
-
-            <div class="flex justify-end space-x-3 pt-3">
-                <button onclick="closeUploadModal()" class="px-5 py-3 text-sm font-extrabold text-stone-600 hover:bg-stone-100 rounded-2xl transition cursor-pointer">Batal</button>
-                <button onclick="handlePhotoUpload()" id="uploadBtn" class="px-7 py-3 text-sm font-extrabold bg-gradient-to-r from-amber-500 via-rose-500 to-emerald-600 hover:scale-105 text-white rounded-2xl transition shadow-lg shadow-emerald-500/30 cursor-pointer">Tambahkan Foto ✨</button>
-            </div>
-        </div>
-    </div>
 
     <footer class="border-t border-amber-200/60 bg-white/70 backdrop-blur-md mt-24 py-12 px-6">
         <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-stone-600 space-y-4 sm:space-y-0 font-bold">
@@ -255,6 +190,6 @@
         </div>
     </footer>
 
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
