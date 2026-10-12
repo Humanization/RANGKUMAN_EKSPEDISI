@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import { getFirestore, collection, addDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
@@ -7,6 +7,7 @@ const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __f
 const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
 let db, auth;
+let isAuthReady = false;
 
 async function initFirebase() {
     try {
@@ -14,14 +15,32 @@ async function initFirebase() {
         db = getFirestore(app);
         auth = getAuth(app);
 
-        if (initialAuthToken) {
-            await signInWithCustomToken(auth, initialAuthToken);
-        } else {
-            await signInAnonymously(auth);
-        }
+        // Listen to auth state changes to guarantee readiness
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                isAuthReady = true;
+            } else {
+                try {
+                    if (initialAuthToken) {
+                        await signInWithCustomToken(auth, initialAuthToken);
+                    } else {
+                        await signInAnonymously(auth);
+                    }
+                } catch (e) {
+                    console.error("Auth sign-in error:", e);
+                }
+            }
+        });
 
-        const user = auth.currentUser;
-        if (!user) return;
+        // Trigger initial sign in if not logged in yet
+        if (!auth.currentUser) {
+            if (initialAuthToken) {
+                await signInWithCustomToken(auth, initialAuthToken);
+            } else {
+                await signInAnonymously(auth);
+            }
+        }
+        isAuthReady = true;
 
         const photosCol = collection(db, 'artifacts', appId, 'public', 'data', 'photos');
         onSnapshot(photosCol, (snapshot) => {
@@ -89,9 +108,20 @@ window.handlePhotoUpload = async function() {
         return;
     }
 
-    if (!auth || !auth.currentUser) {
+    // Ensure database / auth is fully initialized or fallback to sign-in anonymously if needed
+    if (!db) {
         alertBox('⏳ Koneksi database sedang disiapkan, coba beberapa saat lagi.');
         return;
+    }
+
+    if (!auth.currentUser) {
+        try {
+            await signInAnonymously(auth);
+        } catch (e) {
+            console.error("Emergency sign-in failed:", e);
+            alertBox('⏳ Koneksi database sedang disiapkan, coba beberapa saat lagi.');
+            return;
+        }
     }
 
     const category = document.getElementById('uploadCategory').value;
