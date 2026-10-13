@@ -1,13 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jejak Langkah & Cerita Ekspedisi Ceria</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-[#FFFDF9] text-stone-700 antialiased blob-bg min-h-screen selection:bg-amber-200 selection:text-amber-900">
 
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-amber-200/60 transition-all shadow-xs">
@@ -21,12 +24,14 @@
                     <span class="text-xs text-amber-600 font-bold uppercase tracking-wider">Jejak Tawa & Makna Warga</span>
                 </div>
             </div>
+
             <nav class="hidden md:flex items-center space-x-6 text-sm font-bold text-stone-600">
                 <a href="#tpa" class="hover:text-amber-600 transition flex items-center space-x-1.5 bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200/50"><span>🎈</span><span>Anak TPA</span></a>
                 <a href="#sd" class="hover:text-emerald-600 transition flex items-center space-x-1.5 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-200/50"><span>🎒</span><span>Penyuluhan SD</span></a>
                 <a href="#petani" class="hover:text-orange-600 transition flex items-center space-x-1.5 bg-orange-50 px-3 py-1.5 rounded-full border border-orange-200/50"><span>🌾</span><span>Petani Lokal</span></a>
                 <a href="#jembatan" class="hover:text-sky-600 transition flex items-center space-x-1.5 bg-sky-50 px-3 py-1.5 rounded-full border border-sky-200/50"><span>🌉</span><span>Bersih Jembatan</span></a>
             </nav>
+
             <div class="bg-amber-100 text-amber-900 text-xs sm:text-sm font-extrabold px-4 py-2.5 rounded-2xl border border-amber-300 flex items-center space-x-2 shadow-xs">
                 <span>📸</span>
                 <span>Mode Edit Kode Aktif</span>
@@ -41,13 +46,16 @@
                 <span>Rekap Perjalanan Paling Seru & Berkesan</span>
                 <span>🎉</span>
             </span>
+
             <h1 class="text-4xl sm:text-7xl font-extrabold text-stone-900 tracking-tight leading-[1.15] mb-6">
                 Merajut Senyum, Tawa & <br class="hidden sm:inline">
                 <span class="bg-gradient-to-r from-amber-600 via-rose-600 to-emerald-600 bg-clip-text text-transparent">Kenangan Indah</span> Bersama
             </h1>
+
             <p class="text-base sm:text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed mb-10 font-semibold">
                 Setiap peluh berbuah kebahagiaan. Halaman interaktif ini merekam seluruh momen hangat dari riuhnya TPA, serunya sekolah dasar, hingga ketulusan para petani lokal.
             </p>
+
             <div class="flex flex-wrap justify-center gap-3 text-xs sm:text-sm font-extrabold">
                 <div class="flex items-center space-x-2 bg-white px-5 py-3 rounded-2xl border-2 border-amber-200 shadow-sm text-amber-800">
                     <span class="text-base">🎈</span>
@@ -67,7 +75,7 @@
 
     <main class="max-w-4xl mx-auto px-6 space-y-20 py-8">
 
-        <!-- Activity 1: TPA -->
+        <!-- Kegiatan 1: TPA -->
         <section id="tpa" class="scroll-mt-28 bg-white/95 backdrop-blur-md rounded-[3rem] p-6 sm:p-10 border-2 border-amber-200/80 shadow-xl shadow-amber-500/10 hover:shadow-2xl transition duration-300">
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="w-full md:w-1/2 space-y-4">
@@ -89,13 +97,13 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="grid grid-cols-2 gap-4" id="gallery-tpa">
-                        <!-- Foto dimuat otomatis dari script konfigurasi -->
+                        <!-- Galeri foto dimuat oleh script.js -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Activity 2: SD -->
+        <!-- Kegiatan 2: SD -->
         <section id="sd" class="scroll-mt-28 bg-white/95 backdrop-blur-md rounded-[3rem] p-6 sm:p-10 border-2 border-emerald-200/80 shadow-xl shadow-emerald-500/10 hover:shadow-2xl transition duration-300">
             <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
                 <div class="w-full md:w-1/2 space-y-4">
@@ -117,13 +125,13 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="grid grid-cols-2 gap-4" id="gallery-sd">
-                        <!-- Foto dimuat otomatis dari script konfigurasi -->
+                        <!-- Galeri foto dimuat oleh script.js -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Activity 3: Petani -->
+        <!-- Kegiatan 3: Petani -->
         <section id="petani" class="scroll-mt-28 bg-white/95 backdrop-blur-md rounded-[3rem] p-6 sm:p-10 border-2 border-orange-200/80 shadow-xl shadow-orange-500/10 hover:shadow-2xl transition duration-300">
             <div class="flex flex-col md:flex-row gap-8 items-center">
                 <div class="w-full md:w-1/2 space-y-4">
@@ -145,13 +153,13 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="grid grid-cols-2 gap-4" id="gallery-petani">
-                        <!-- Foto dimuat otomatis dari script konfigurasi -->
+                        <!-- Galeri foto dimuat oleh script.js -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Activity 4: Jembatan Kaca -->
+        <!-- Kegiatan 4: Jembatan Kaca -->
         <section id="jembatan" class="scroll-mt-28 bg-white/95 backdrop-blur-md rounded-[3rem] p-6 sm:p-10 border-2 border-sky-200/80 shadow-xl shadow-sky-500/10 hover:shadow-2xl transition duration-300">
             <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
                 <div class="w-full md:w-1/2 space-y-4">
@@ -173,7 +181,7 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="grid grid-cols-2 gap-4" id="gallery-jembatan">
-                        <!-- Foto dimuat otomatis dari script konfigurasi -->
+                        <!-- Galeri foto dimuat oleh script.js -->
                     </div>
                 </div>
             </div>
@@ -190,6 +198,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
